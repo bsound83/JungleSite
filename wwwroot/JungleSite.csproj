@@ -1,0 +1,488 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{86592C94-5E09-417B-B1E2-AFDB757B24D4}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Jungle</RootNamespace>
+    <AssemblyName>FV.Jungle</AssemblyName>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions.Design, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Web.Routing">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Templates\Public\Pages\Page.aspx" />
+    <Content Include="Templates\Public\Pages\Search.aspx" />
+    <Content Include="Templates\Public\Pages\XForm.aspx" />
+    <Content Include="Templates\Public\Units\Placeable\MainBody.ascx" />
+    <Content Include="Templates\Public\Units\Placeable\PageList.ascx" />
+    <Content Include="Templates\Public\Units\Placeable\XForm.ascx" />
+    <Content Include="Templates\Public\Units\Static\BreadCrumbs.ascx" />
+    <Content Include="Templates\Public\Units\Static\Functions.ascx" />
+    <Content Include="Templates\Public\Units\Static\Header.ascx" />
+    <Content Include="Templates\Public\Units\Static\MainMenu.ascx" />
+    <Content Include="Templates\Public\Units\Static\PageFooter.ascx" />
+    <Content Include="Templates\Public\Units\Static\PageHeader.ascx" />
+    <Content Include="Templates\Public\Units\Static\QuickSearch.ascx" />
+    <Content Include="Templates\Public\Units\Static\SubMenu.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Templates\Public\MasterPages\MasterPage.master.cs">
+      <DependentUpon>MasterPage.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Public\MasterPages\MasterPage.master.designer.cs">
+      <DependentUpon>MasterPage.master</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Public\Pages\Demo.aspx.cs">
+      <DependentUpon>Demo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Public\Pages\Demo.aspx.designer.cs">
+      <DependentUpon>Demo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Public\Pages\Document.aspx.cs">
+      <DependentUpon>Document.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Public\Pages\Document.aspx.designer.cs">
+      <DependentUpon>Document.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Public\Pages\DocumentList.aspx.cs">
+      <DependentUpon>DocumentList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Public\Pages\DocumentList.aspx.designer.cs">
+      <DependentUpon>DocumentList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Public\Pages\FileExplorer.aspx.cs">
+      <DependentUpon>FileExplorer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Public\Pages\FileExplorer.aspx.designer.cs">
+      <DependentUpon>FileExplorer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Public\Pages\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Public\Pages\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Public\Pages\NewsItem.aspx.cs">
+      <DependentUpon>NewsItem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Public\Pages\NewsItem.aspx.designer.cs">
+      <DependentUpon>NewsItem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Public\Pages\Page.aspx.cs">
+      <DependentUpon>Page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Public\Pages\Page.aspx.designer.cs">
+      <DependentUpon>Page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Public\Pages\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Public\Pages\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Public\Pages\RssFeed.aspx.cs">
+      <DependentUpon>RssFeed.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Public\Pages\RssFeed.aspx.designer.cs">
+      <DependentUpon>RssFeed.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Public\Pages\Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Public\Pages\Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Public\Pages\SiteMap.aspx.cs">
+      <DependentUpon>SiteMap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Public\Pages\SiteMap.aspx.designer.cs">
+      <DependentUpon>SiteMap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Public\Pages\SubscriptionPage.aspx.cs">
+      <DependentUpon>SubscriptionPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Public\Pages\SubscriptionPage.aspx.designer.cs">
+      <DependentUpon>SubscriptionPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Public\Pages\XForm.aspx.cs">
+      <DependentUpon>XForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Public\Pages\XForm.aspx.designer.cs">
+      <DependentUpon>XForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Public\Units\Placeable\Document.ascx.cs">
+      <DependentUpon>Document.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Public\Units\Placeable\Document.ascx.designer.cs">
+      <DependentUpon>Document.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Public\Units\Placeable\DocumentList.ascx.cs">
+      <DependentUpon>DocumentList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Public\Units\Placeable\DocumentList.ascx.designer.cs">
+      <DependentUpon>DocumentList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Public\Units\Placeable\FileList.ascx.cs">
+      <DependentUpon>FileList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Public\Units\Placeable\FileList.ascx.designer.cs">
+      <DependentUpon>FileList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Public\Units\Placeable\Flash.ascx.cs">
+      <DependentUpon>Flash.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Public\Units\Placeable\Flash.ascx.designer.cs">
+      <DependentUpon>Flash.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Public\Units\Placeable\MainBody.ascx.cs">
+      <DependentUpon>MainBody.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Public\Units\Placeable\MainBody.ascx.designer.cs">
+      <DependentUpon>MainBody.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Public\Units\Placeable\PageList.ascx.cs">
+      <DependentUpon>PageList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Public\Units\Placeable\PageList.ascx.designer.cs">
+      <DependentUpon>PageList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Public\Units\Placeable\RssReader.ascx.cs">
+      <DependentUpon>RssReader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Public\Units\Placeable\RssReader.ascx.designer.cs">
+      <DependentUpon>RssReader.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Public\Units\Placeable\XForm.ascx.cs">
+      <DependentUpon>XForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Public\Units\Placeable\XForm.ascx.designer.cs">
+      <DependentUpon>XForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Public\Units\Static\BreadCrumbs.ascx.cs">
+      <DependentUpon>BreadCrumbs.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Public\Units\Static\BreadCrumbs.ascx.designer.cs">
+      <DependentUpon>BreadCrumbs.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Public\Units\Static\ChangePassword.ascx.cs">
+      <DependentUpon>ChangePassword.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Public\Units\Static\ChangePassword.ascx.designer.cs">
+      <DependentUpon>ChangePassword.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Public\Units\Static\ForgotPassword.ascx.cs">
+      <DependentUpon>ForgotPassword.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Public\Units\Static\ForgotPassword.ascx.designer.cs">
+      <DependentUpon>ForgotPassword.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Public\Units\Static\Functions.ascx.cs">
+      <DependentUpon>Functions.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Public\Units\Static\Functions.ascx.designer.cs">
+      <DependentUpon>Functions.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Public\Units\Static\Header.ascx.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Public\Units\Static\Header.ascx.designer.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Public\Units\Static\MainMenu.ascx.cs">
+      <DependentUpon>MainMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Public\Units\Static\MainMenu.ascx.designer.cs">
+      <DependentUpon>MainMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Public\Units\Static\PageFooter.ascx.cs">
+      <DependentUpon>PageFooter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Public\Units\Static\PageFooter.ascx.designer.cs">
+      <DependentUpon>PageFooter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Public\Units\Static\PageHeader.ascx.cs">
+      <DependentUpon>PageHeader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Public\Units\Static\PageHeader.ascx.designer.cs">
+      <DependentUpon>PageHeader.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Public\Units\Static\QuickSearch.ascx.cs">
+      <DependentUpon>QuickSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Public\Units\Static\QuickSearch.ascx.designer.cs">
+      <DependentUpon>QuickSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Public\Units\Static\SubMenu.ascx.cs">
+      <DependentUpon>SubMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Public\Units\Static\SubMenu.ascx.designer.cs">
+      <DependentUpon>SubMenu.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Templates\Public\MasterPages\MasterPage.master" />
+    <Content Include="Templates\Public\Pages\Demo.aspx" />
+    <Content Include="Templates\Public\Pages\Login.aspx" />
+    <Content Include="Templates\Public\Pages\NewsItem.aspx" />
+    <Content Include="Templates\Public\Pages\RssFeed.aspx" />
+    <Content Include="Templates\Public\Pages\SiteMap.aspx" />
+    <Content Include="Templates\Public\Pages\SubscriptionPage.aspx" />
+    <Content Include="Templates\Public\Styles\print.css" />
+    <Content Include="Templates\Public\Units\Placeable\Flash.ascx" />
+    <Content Include="Templates\Public\Units\Placeable\RssReader.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="lang\NewPublicTemplates.xml" />
+    <Content Include="lang\lang_DA.xml" />
+    <Content Include="lang\lang_DE.xml" />
+    <Content Include="lang\lang_EN.xml" />
+    <Content Include="lang\lang_ES.xml" />
+    <Content Include="lang\lang_FI.xml" />
+    <Content Include="lang\lang_FR.xml" />
+    <Content Include="lang\lang_JA.xml" />
+    <Content Include="lang\lang_NL.xml" />
+    <Content Include="lang\lang_NO.xml" />
+    <Content Include="lang\lang_PT.xml" />
+    <Content Include="lang\lang_SV.xml" />
+    <Content Include="lang\lang_ZH.xml" />
+    <Content Include="Templates\Public\Images\MainMenuSearchButton.png" />
+    <Content Include="Templates\Public\Styles\Glossy\images\extensions\bmp.gif" />
+    <Content Include="Templates\Public\Styles\Glossy\images\extensions\default.gif" />
+    <Content Include="Templates\Public\Styles\Glossy\images\extensions\doc.gif" />
+    <Content Include="Templates\Public\Styles\Glossy\images\extensions\gif.gif" />
+    <Content Include="Templates\Public\Styles\Glossy\images\extensions\htm.gif" />
+    <Content Include="Templates\Public\Styles\Glossy\images\extensions\jpg.gif" />
+    <Content Include="Templates\Public\Styles\Glossy\images\extensions\mp3.gif" />
+    <Content Include="Templates\Public\Styles\Glossy\images\extensions\mpg.gif" />
+    <Content Include="Templates\Public\Styles\Glossy\images\extensions\pdf.gif" />
+    <Content Include="Templates\Public\Styles\Glossy\images\extensions\png.gif" />
+    <Content Include="Templates\Public\Styles\Glossy\images\extensions\ppt.gif" />
+    <Content Include="Templates\Public\Styles\Glossy\images\extensions\tif.gif" />
+    <Content Include="Templates\Public\Styles\Glossy\images\extensions\txt.gif" />
+    <Content Include="Templates\Public\Styles\Glossy\images\extensions\wav.gif" />
+    <Content Include="Templates\Public\Styles\Glossy\images\extensions\xls.gif" />
+    <Content Include="Templates\Public\Styles\Glossy\images\extensions\zip.gif" />
+    <Content Include="Templates\Public\Styles\Glossy\images\FooterCornerLeft.png" />
+    <Content Include="Templates\Public\Styles\Glossy\images\FooterCornerRight.png" />
+    <Content Include="Templates\Public\Styles\Glossy\images\PageBg.png" />
+    <Content Include="Templates\Public\Styles\Glossy\images\PageCornerRight.png" />
+    <Content Include="Templates\Public\Pages\Document.aspx" />
+    <Content Include="Templates\Public\Pages\DocumentList.aspx" />
+    <Content Include="Templates\Public\Pages\FileExplorer.aspx" />
+    <Content Include="Templates\Public\Pages\Register.aspx" />
+    <Content Include="Templates\Public\Styles\Glossy\images\ButtonLanguage.png" />
+    <Content Include="Templates\Public\Styles\Glossy\images\ButtonLogin.png" />
+    <Content Include="Templates\Public\Styles\Glossy\images\ButtonRss.png" />
+    <Content Include="Templates\Public\Styles\Glossy\images\ButtonSitemap.png" />
+    <Content Include="Templates\Public\Styles\Glossy\images\MainMenuBg.png" />
+    <Content Include="Templates\Public\Styles\Glossy\images\MainMenuDivider.png" />
+    <Content Include="Templates\Public\Styles\Glossy\images\MainMenuHoverBg.png" />
+    <Content Include="Templates\Public\Styles\Glossy\images\MainMenuLeft.png" />
+    <Content Include="Templates\Public\Styles\Glossy\images\MainMenuSearchButton.png" />
+    <Content Include="Templates\Public\Styles\Glossy\images\MainMenuSelectedBg.png" />
+    <Content Include="Templates\Public\Styles\Glossy\images\MainMenuSelectedLeft.png" />
+    <Content Include="Templates\Public\Styles\Glossy\images\PageCornerLeft.png" />
+    <Content Include="Templates\Public\Styles\Glossy\images\PageDivider.png" />
+    <Content Include="Templates\Public\Styles\Glossy\images\SubMenuSelected.png" />
+    <Content Include="Templates\Public\Styles\Glossy\Styles.css" />
+    <Content Include="Templates\Public\Units\Placeable\Document.ascx" />
+    <Content Include="Templates\Public\Units\Placeable\DocumentList.ascx" />
+    <Content Include="Templates\Public\Units\Placeable\FileList.ascx" />
+    <Content Include="Templates\Public\Units\Static\ChangePassword.ascx" />
+    <Content Include="Templates\Public\Units\Static\ForgotPassword.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Templates\Public\Images\flags\AUS.png" />
+    <Content Include="Templates\Public\Images\flags\DE.png" />
+    <Content Include="Templates\Public\Images\flags\EN.png" />
+    <Content Include="Templates\Public\Images\flags\GB.png" />
+    <Content Include="Templates\Public\Images\flags\IE.png" />
+    <Content Include="Templates\Public\Images\flags\IT.png" />
+    <Content Include="Templates\Public\Images\flags\NO.png" />
+    <Content Include="Templates\Public\Images\flags\NZ.png" />
+    <Content Include="Templates\Public\Images\flags\SF.png" />
+    <Content Include="Templates\Public\Images\flags\SV.png" />
+    <Content Include="Templates\Public\Styles\Glossy\Editor.css" />
+    <Content Include="Templates\Public\Styles\Glossy\images\ButtonBg.png" />
+    <Content Include="Templates\Public\Styles\Glossy\images\SitemapBullet.png" />
+    <Content Include="Web.config" />
+    <Content Include="episerver.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="EPiServerFramework.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="connectionStrings.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Templates\Jungle\Images\" />
+    <Folder Include="Templates\Jungle\MasterPages\" />
+    <Folder Include="Templates\Jungle\Pages\" />
+    <Folder Include="Templates\Jungle\Scripts\" />
+    <Folder Include="Templates\Jungle\Styles\" />
+    <Folder Include="Templates\Jungle\Units\" />
+    <Folder Include="Templates\Jungle\Util\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <RootPath Condition="'$(RootPath)' == ''">$(MSBuildProjectDirectory)\..\..</RootPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Target Name="BeforeBuild">
+    <ItemGroup>
+      <CustomAdditionalCompileInputs Include="@(EPiServerDataFiles);@(EPiServerDataFiles);@(AppBrowserFiles);@(SiteBinFiles);@(RecursiveMarkup)" />
+    </ItemGroup>
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://jungle/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <ItemGroup>
+    <Reference Include="EPiServer">
+      <HintPath>bin\EPiServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.BaseLibrary">
+      <HintPath>bin\EPiServer.BaseLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Configuration">
+      <HintPath>bin\EPiServer.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Web.WebControls">
+      <HintPath>bin\EPiServer.Web.WebControls.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.XForms">
+      <HintPath>bin\EPiServer.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Data">
+      <HintPath>bin\EPiServer.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Framework">
+      <HintPath>bin\EPiServer.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Shell">
+      <HintPath>bin\EPiServer.Shell.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+</Project>

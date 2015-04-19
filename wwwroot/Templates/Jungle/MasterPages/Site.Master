@@ -1,0 +1,41 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Jungle.Templates.Jungle.MasterPages.Site" %>
+<%@ Register TagPrefix="Jungle" TagName="Header" Src="~/Templates/Jungle/Units/Header.ascx" %>
+<%@ Register TagPrefix="Jungle" TagName="PageHeader" Src="~/Templates/Jungle/Units/PageHeader.ascx" %>
+<%@ Register TagPrefix="Jungle" TagName="PageFooter" Src="~/Templates/Jungle/Units/PageFooter.ascx" %>
+
+<!DOCTYPE html>
+<!--[if IE 7 ]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> 
+<html runat="server" id="HtmlElement"> <!--<![endif]-->
+<head runat="server">
+    <title>JungleLand</title>
+    
+    <Jungle:Header runat="server"/>
+
+</head>
+<body id="top">
+    <form id="form1" runat="server">
+        <div id="wrap">
+            <Jungle:PageHeader runat="server"/>
+            <div id="content-wrap">
+                <div id="content">
+                    <!-- main -->
+                    <div id="main">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div><!-- /main -->
+                    <div id="sidebar">
+                        <div class="sidemenu">
+                            
+                        </div>
+                    </div><!-- /sidebar -->
+                </div><!-- /#content -->
+            </div><!-- /#content-wrap -->
+        </div><!-- /#wrap -->
+        <!-- footer -->
+        <Jungle:PageFooter runat="server"/>
+    </form>
+</body>
+</html>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="JungleSite">
+</Property><Property Name="Solution File" Value="C:\EPiServer\Sites\JungleSite\JungleSite.sln">
+</Property><Property Name="Date" Value="Sunday, April 19, 2015">
+</Property><Property Name="Time" Value="4:50:18 AM">
+</Property></Properties><Event ErrorLevel="0" Project="JungleSite" Source="JungleSite.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="JungleSite" Source="JungleSite.csproj" Description="Converted">
+</Event><Event ErrorLevel="2" Project="" Source="JungleSite.csproj" Description="The Web Application Project JungleSite is configured to use IIS. To access local IIS Web sites, you must install the following IIS components:&#xA;&#xA;      IIS 6 Metabase and IIS 6 Configuration Compatibility&#xA;&#xA;In addition, you must run Visual Studio in the context of an administrator account.&#xA;&#xA;For more information, press F1.">
+</Event></UpgradeLog>

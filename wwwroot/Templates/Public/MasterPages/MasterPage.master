@@ -1,0 +1,85 @@
+<%@ Master Language="C#" AutoEventWireup="False" Codebehind="MasterPage.master.cs" Inherits="EPiServer.Templates.Public.MasterPages.MasterPage" %>
+<%@ Register TagPrefix="public" TagName="Header"		Src="~/Templates/Public/Units/Static/Header.ascx" %>
+<%@ Register TagPrefix="public" TagName="PageHeader"	Src="~/Templates/Public/Units/Static/PageHeader.ascx" %>
+<%@ Register TagPrefix="public" TagName="MainMenu"		Src="~/Templates/Public/Units/Static/MainMenu.ascx" %>
+<%@ Register TagPrefix="public" TagName="BreadCrumbs"	Src="~/Templates/Public/Units/Static/BreadCrumbs.ascx" %>
+<%@ Register TagPrefix="public" TagName="Functions"		Src="~/Templates/Public/Units/Static/Functions.ascx" %>
+<%@ Register TagPrefix="public" TagName="QuickSearch"	Src="~/Templates/Public/Units/Static/QuickSearch.ascx" %>
+<%@ Register TagPrefix="public" TagName="SubMenu"		Src="~/Templates/Public/Units/Static/SubMenu.ascx" %>
+<%@ Register TagPrefix="public" TagName="MainBody"      Src="~/Templates/Public/Units/Placeable/MainBody.ascx" %>
+<%@ Register TagPrefix="public" TagName="PageFooter"	Src="~/Templates/Public/Units/Static/PageFooter.ascx" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" runat="server" id="HtmlElement">
+
+	<head runat="server">
+		<title runat="server"></title>
+		<public:Header runat="server" />
+	</head>
+	
+	<body>
+		<a accesskey="s" class="hidden" href="#MainContentArea" tabindex="1000" title="<%= EPiServer.Core.LanguageManager.Instance.Translate("/navigation/skipnavigation") %>"><%=EPiServer.Core.LanguageManager.Instance.Translate("/navigation/skipnavigation")%></a>
+		
+		<form runat="server">
+			
+			<div id="Page">
+						
+				<div id="HeaderArea">
+					<public:PageHeader runat="server" />
+				</div>
+				
+				<div id="MainMenuArea">
+					<public:MainMenu runat="server" ID="MainMenu" />
+					<public:QuickSearch runat="server" ID="QuickSearch" />
+				</div>
+		            
+				<asp:ContentPlaceHolder ID="MainRegion" runat="server">
+			
+					<asp:ContentPlaceHolder ID="BreadCrumbsRegion" runat="server">
+						<div id="BreadCrumbsArea">
+							<public:BreadCrumbs runat="server" />
+						</div>
+					</asp:ContentPlaceHolder>
+				
+					<div id="StageArea">
+			
+						<div id="SubMenuArea">
+							<public:SubMenu runat="server" ID="SubMenu" />
+						</div>
+
+						<div id="MainContentArea">
+							<asp:ContentPlaceHolder ID="MainContentRegion" runat="server">
+								<div id="MainBodyArea">
+								    <asp:ValidationSummary ID="XFormValidationSummary" runat="server" ValidationGroup="XForm" />
+									<asp:ContentPlaceHolder ID="MainBodyRegion" runat="server">
+										<div id="MainBody">
+											<public:MainBody runat="server" />
+										</div>
+									</asp:ContentPlaceHolder>
+								</div>
+								<div id="SecondaryBodyArea">
+									<asp:ContentPlaceHolder ID="SecondaryBodyRegion" runat="server">
+										<div id="SecondaryBody">
+											<EPiServer:Property PropertyName="SecondaryBody" DisplayMissingMessage="false" EnableViewState="false" runat="server" />
+										</div>
+									</asp:ContentPlaceHolder>
+								</div>
+							</asp:ContentPlaceHolder>
+						</div>
+					</div>
+					
+				</asp:ContentPlaceHolder>
+				
+				<div id="FooterArea">
+					<public:PageFooter runat="server" />
+				</div>
+	        
+			</div>
+	        
+		</form>
+	    
+		<EPiServer:LogGenerator ID="PixelImg" runat="server" />
+	    
+	</body>
+</html>
